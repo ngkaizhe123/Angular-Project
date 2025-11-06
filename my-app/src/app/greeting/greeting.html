@@ -1,0 +1,14 @@
+<h2>Welcome to my first Angular component!</h2>
+<p>This is created by {{ name || 'Kai Zhe' }}.</p> <!--if name is null will show 'someone'--> 
+
+<h2>Welcome!</h2>
+
+<input [(ngModel)]="name" placeholder="Enter your name" />
+<button (click)="sayHello()">Say Hello</button>
+<button (click)="clearName()">Clear</button>
+
+@if (message) {
+  <p>{{ message }}</p>
+}
+
+
