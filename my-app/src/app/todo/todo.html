@@ -1,0 +1,17 @@
+<h2>My To-Do List</h2>
+
+<input [(ngModel)]="newTask" placeholder="Enter a task" />
+<button (click)="addTask()">Add</button>
+
+<hr />
+
+@for (task of tasks; track $index) {
+  <div>
+    {{ $index + 1 }}. {{ task }}
+    <button (click)="deleteTask($index)">Delete</button>
+  </div>
+}
+
+@if (tasks.length === 0) {
+  <p>No tasks yet. Add one above!</p>
+}
